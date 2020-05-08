@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Ricardos Quiz</title>
+        <link href="Stylesheet.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <script src="main.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body style="background-color:lightgray ;">
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+        <div style="background-color:lightgrey;padding:0px 0px 0px"></strong>.</div>
+        
+        <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+        
+        <h1>Energy test review for chem.</h1>
+        <form id="quiz" name="quiz">
+            <h1 style="font-size: x-large;">C.1 Energy Sources</h1>
+
+            <p>State two essential chracteristics for a useful energy source?</p>
+            <input id="textbox" type="text" name="question1">
+
+            <p>True or False? Nuclear energy is a renewable energy source</p>
+            <input type="radio" id="mc" name="question2" value="True">True<br>
+            <input type="radio" id="mc" name="question2" value="False">False<br>
+
+            <h1 style="font-size: x-large;">C.2 Fossil Fuels</h1>
+
+            <p>Which of the following is in crude oil but only in small ammounts? </p>
+            <input type="radio" id="mc" name="question3" value="Sulfur">Sulfur<br>
+            <input type="radio" id="mc" name="question3" value="Hydrogen">Hydrogen<br>
+            <input type="radio" id="mc" name="question3" value="carbon">Carbon<br>
+
+            <p>True or False?  Can Coal be tunred into gasoline?</p>
+            <input type="radio" id="mc" name="question4" value="True">True<br>
+            <input type="radio" id="mc" name="question4" value="False">False<br>
+
+            <h1 style="font-size: x-large;">C.3 Nuclear Fusion and Fission</h1>
+
+            <p>What is this called?</p> <img src="img/Nucleons.png" alt="Nucleon" style="width: 399px;">
+            <input type="radio" style="margin-top: 100px;" id="mc" name="question5" value="Nucleon">Nucleon<br>
+            <input type="radio" id="mc" name="question5" value="Neutron">Neutron<br>
+
+            <p>What is this process called?</p> <img src="img/halflife.gif" alt="halflife" style="width: 250px;">
+            <input id="textbox" type="text" name="question6" style="margin-top: 10px;" style="width: 20px;">
+
+            <h1 style="font-size: x-large;">C.4 Solar Energy</h1>
+
+            <p>what is the equaiton for photosythesis?</p>
+            <input id="textbox" type="text" name="question7">
+
+            <p>why does ethanol-based fuels have a lower carbon footprint than petrolueim-based fuels?</p>
+            <input id="textbox" type="text" name="question8">
+
+            <h1 style="font-size: x-large;">C.5 Enviormental impact - global warming</h1>
+
+            <p>What is the green house effect?</p>
+                <input id="textbox" type="text" name="question9">
+
+            <p>True or False? Does the ammount of pollution affect Global warming?</p><img src="img/Pollution.jpg" alt="chem stuff" style="width: 400px;">
+            
+            <input type="radio" id="mc" name="question10" value="True">True<br>
+            <input type="radio" id="mc" name="question10" value="False">False<br>
+
+
+            <input id="button" type="button" value="I'm done!" onclick = check();>
+        </form>
+
+        <div id="after_submit">
+            <p id="message"></p>
+            <p id="number_correct"></p>
+            <img id="picture">
+            <a href="answers.html">The answers</a>
+        </div>
+
+    </body>
+</html>
